@@ -15,7 +15,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // MongoDB Config and Listener
-mongoose.connect(process.env.MONGODB_CONNECT_STRING, {
+const MONGO_URI = "mongodb+srv://jlcco:jlcco1234@cluster0.0krgn.mongodb.net/sample-api-blog-posts?retryWrites=true&w=majority";
+
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true, 
   useUnifiedTopology: true
 })
